@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Página Dinâmica</title>
-    <script src="hello.js"></script>
-    <script>
-      const setColor = () => {
-        const colors = ["red", "green", "purple"];
-        const rand = Math.floor(Math.random() * colors.length);
-        document.body.style.backgroundColor = colors[rand];
-        const h1 = document.createElement("h1");
-        h1.innerText = hello(); // usando a função do hello.js
-        document.body.appendChild(h1);
-      };
-      window.onload = setColor;
-    </script>
-  </head>
-  <body></body>
+<head>
+  <meta charset="UTF-8">
+  <title>Minha Página S3</title>
+  <script src="hello.js"></script>
+</head>
+<body onload="setColor()">
+  <h1 id="msg"></h1>
+
+  <script>
+    function setColor() {
+      var col = ["red", "green", "purple"];
+      var num = Math.floor(Math.random() * col.length);
+      document.body.style.backgroundColor = col[num];
+
+      const h1 = document.getElementById("msg");
+      h1.textContent = hello(); // hello() vem do hello.js
+    }
+  </script>
+</body>
 </html>
