@@ -1,13 +1,19 @@
+<!DOCTYPE html>
 <html>
-  <script src="./hello.js"></script>
-  <script>
-    var setColor = function () {
-      var col = ["red", "green", "purple"];
-      var num = Math.floor(Math.random() * 3);
-      var s = `<body bgcolor=  ${col[num]} >`;
-      document.write(s);
-      document.write(`<h1> ${hello from Sao Paulo()} </h1>`);
-    };
-    window.onload = setColor;
-  </script>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello from S3</title>
+    <script src="./hello.js"></script>
+    <script>
+      var setColor = function () {
+        var col = ["red", "green", "purple"];
+        var num = Math.floor(Math.random() * 3);
+        document.body.style.backgroundColor = col[num];
+        document.body.innerHTML = `<h1>${hello()}</h1>`;
+      };
+      window.onload = setColor;
+    </script>
+  </head>
+  <body>
+  </body>
 </html>
