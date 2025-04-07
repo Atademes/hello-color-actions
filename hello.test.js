@@ -1,7 +1,5 @@
-const hello = require("./hello");
+const hello = require('./hello');
 
-describe("My hello", () => {
-  test("works", () => {
-    expect(hello.hello()).toEqual("Hello World from the Office Hours in the terminal!");
-  });
+test('returns correct greeting', () => {
+  expect(hello()).toBe("Hello World from Sao Paulo");
 });

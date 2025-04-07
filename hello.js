@@ -1,4 +1,5 @@
-const hello = () => "Hello, I'm from Sao Paulo";
-console.log(hello()); // Corrigido: sem argumentos e com parênteses corretos
-exports.hello = hello;
+const hello = require('./hello');
 
+test('returns correct greeting', () => {
+  expect(hello()).toBe("Hello World from Sao Paulo");
+});

@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Testando Cores</title>
+    <title>Página Dinâmica</title>
     <script src="hello.js"></script>
     <script>
-      var setColor = function () {
-        var col = ["red", "green", "purple"];
-        var num = Math.floor(Math.random() * 3);
-        document.body.style.backgroundColor = col[num];  // Altera o fundo da página
-        var h1 = document.createElement("h1");  // Cria o título
-        h1.textContent = hello();  // Assume que a função hello() está definida corretamente
-        document.body.appendChild(h1);  // Adiciona o título ao corpo da página
+      const setColor = () => {
+        const colors = ["red", "green", "purple"];
+        const rand = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[rand];
+        const h1 = document.createElement("h1");
+        h1.innerText = hello(); // usando a função do hello.js
+        document.body.appendChild(h1);
       };
       window.onload = setColor;
     </script>
   </head>
-  <body>
-    <!-- O conteúdo será adicionado pelo script -->
-  </body>
+  <body></body>
 </html>
