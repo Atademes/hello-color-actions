@@ -1,13 +1,19 @@
+<!DOCTYPE html>
 <html>
-  <script src="./hello.js"></script>
-  <script>
-    var setColor = function () {
-      var col = ["red", "green", "purple"];
-      var num = Math.floor(Math.random() * 3);
-      var s = `<body bgcolor=  ${col[num]} >`;
-      document.write(s);
-      document.write(`<h1> ${hello()} </h1>`);
-    };
-    window.onload = setColor;
-  </script>
+  <head>
+    <title>Página Dinâmica</title>
+    <script src="hello.js"></script>
+    <script>
+      const setColor = () => {
+        const colors = ["red", "green", "purple"];
+        const rand = Math.floor(Math.random() * colors.length);
+        document.body.style.backgroundColor = colors[rand];
+        const h1 = document.createElement("h1");
+        h1.innerText = hello(); // usando a função do hello.js
+        document.body.appendChild(h1);
+      };
+      window.onload = setColor;
+    </script>
+  </head>
+  <body></body>
 </html>
