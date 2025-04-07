@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-  <meta charset="UTF-8">
-  <title>Site no S3</title>
-</head>
-<body style="text-align: center; font-family: Arial;">
-  <h1>🎉 Olá, Celso!</h1>
-  <p>Seu site no Amazon S3 está funcionando!</p>
-</body>
+<html>
+  <script src="./hello.js"></script>
+  <script>
+    var setColor = function () {
+      var col = ["red", "green", "purple"];
+      var num = Math.floor(Math.random() * 3);
+      var s = `<body bgcolor=  ${col[num]} >`;
+      document.write(s);
+      document.write(`<h1> ${hello()} </h1>`);
+    };
+    window.onload = setColor;
+  </script>
 </html>
