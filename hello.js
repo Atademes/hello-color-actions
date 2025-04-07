@@ -1,5 +1,5 @@
-const hello = require('./hello');
+function hello() {
+  return "Hello World from Sao Paulo";
+}
 
-test('returns correct greeting', () => {
-  expect(hello()).toBe("Hello World from Sao Paulo");
-});
+module.exports = hello;
