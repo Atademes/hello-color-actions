@@ -1,13 +1,29 @@
-<html>
-  <script src="./hello.js"></script>
-  <script>
-    var setColor = function () {
-      var col = ["red", "green", "purple"];
-      var num = Math.floor(Math.random() * 3);
-      var s = `<body bgcolor=  ${col[num]} >`;
-      document.write(s);
-      document.write(`<h1> ${hello()} </h1>`);
-    };
-    window.onload = setColor;
-  </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello Page</title>
+  <style>
+    body {
+      background-color: #222;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1, h2 {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hello, I'm from Sao Paulo</h1>
+  <h2>Hello World from the Office Hours in the terminal!</h2>
+</body>
 </html>
