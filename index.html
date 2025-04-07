@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <title>Hello from S3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testando Cores</title>
     <script src="hello.js"></script>
     <script>
       var setColor = function () {
         var col = ["red", "green", "purple"];
         var num = Math.floor(Math.random() * 3);
-        document.body.style.backgroundColor = col[num];
-        document.body.innerHTML = `<h1>${hello()}</h1>`;
+        document.body.style.backgroundColor = col[num];  // Altera o fundo da página
+        var h1 = document.createElement("h1");  // Cria o título
+        h1.textContent = hello();  // Assume que a função hello() está definida corretamente
+        document.body.appendChild(h1);  // Adiciona o título ao corpo da página
       };
       window.onload = setColor;
     </script>
   </head>
-  <body></body>
+  <body>
+    <!-- O conteúdo será adicionado pelo script -->
+  </body>
 </html>
